@@ -13,6 +13,7 @@ export class Employee {
   /* Whatever data is inside this array → table will show. */
   employees: any[] = [
     { name: 'Jeel', email: 'jeel@gmail.com', phone: '9999999999' }
+    
   ];
 
 
@@ -29,5 +30,10 @@ export class Employee {
   addEmployee(data: any) {
     this.employees.push(data);
     this.closePopup();
+  }
+
+  /* delete row */
+  deleteEmployee(index: number){
+    this.employees.splice(index, 1);
   }
 }

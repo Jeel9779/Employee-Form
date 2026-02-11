@@ -12,14 +12,19 @@
           <th>Name</th>
           <th>Email</th>
           <th>Phone</th>
+          <th>Action</th>
         </tr>
       </thead>
 
       <tbody>
-        <tr *ngFor="let emp of employees">
+        <tr *ngFor="let emp of employees; let i = index ">
           <td>{{ emp.name }}</td>
           <td>{{ emp.email }}</td>
           <td>{{ emp.phone }}</td>
+          <td>
+            <button class="delete-btn" (click)="deleteEmployee(i)">Delete
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>

@@ -2,6 +2,7 @@
 
 <form (ngSubmit)="submitForm()" class="form">
 
+  <label> Name </label>
   <input
     type="text"
     name="name"
@@ -9,6 +10,7 @@
     [(ngModel)]="employee.name"
     required>
 
+  <label> Email </label>
   <input
     type="email"
     name="email"
@@ -16,6 +18,7 @@
     [(ngModel)]="employee.email"
     required>
 
+  <label> Phone no </label>
   <input
     type="text"
     name="phone"
@@ -26,5 +29,6 @@
   <button type="submit" class="submit-btn">
     Submit
   </button>
+
 
 </form>
