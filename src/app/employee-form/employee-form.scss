@@ -1,0 +1,41 @@
+h3 {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* input:focus {
+  border-color: #624df1;
+} */
+input:hover {
+     border-color: rgb(143, 143, 245);
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 80px;
+  align-self: flex-end;
+  
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
