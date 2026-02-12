@@ -1,4 +1,4 @@
-h3 {
+h2 {
   margin-bottom: 20px;
   text-align: center;
 }
@@ -18,6 +18,7 @@ input {
   transition: 0.3s;
 }
 
+
 /* input:focus {
   border-color: #624df1;
 } */
@@ -25,20 +26,33 @@ input:hover {
      border-color: rgb(143, 143, 245);
 }
 
-.submit-btn {
-  background-color: #4CAF50;
-  color: white;
+
+button {
+  width: 35%;
   padding: 10px;
   border: none;
   border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
   cursor: pointer;
-  transition: 0.3s;
-  width: 80px;
-  align-self: flex-end;
-  
+  transition: 0.3s ease;
+  align-self: center;
 }
 
-.submit-btn:hover {
-  background-color: #45a049;
+.create-btn {
+  background-color: #22c55e;
 }
 
+.create-btn:hover{
+  background-color: #05792f;
+}
+
+
+.update-btn {
+  background-color: #f9b53f;
+}
+
+.update-btn:hover {
+  background-color: #ef9a08;
+}

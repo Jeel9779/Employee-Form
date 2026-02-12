@@ -4,15 +4,13 @@
   background: linear-gradient(45deg, #667eea, #d9b7fa);
   padding: 30px 0;
 }
-
-
-
+ 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
-  width: 60%;
+  width: 50%;
   margin: 100px auto;
 }
 
@@ -50,7 +48,7 @@ h2 {
 
 table {
   width: 100%;
- /*  border-collapse: collapse; */
+ /*  border-collapse: collapse;  */
 }
 
 thead {
@@ -60,6 +58,7 @@ thead {
 th, td {
   padding: 12px;
   text-align: left;
+  
 }
 
 th {
@@ -105,17 +104,45 @@ tbody tr:hover {
   cursor: pointer;
 }
 
-/* delete btn */
+.close-btn:hover {
+  background: #ddd;
+}
 
-/* .delete-btn {
-  background-color: #e75957;
-  color: white;
+/* Action btn ---- edit / delete */
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 12px;
+  
+  
+}
+
+.edit-btn {
+  background-color: #ffc107;
   border: none;
   padding: 6px 12px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 500;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
 }
 
 .delete-btn:hover {
-  background-color: #c62828;
-} */
+  background-color: #c82333;
+}
+

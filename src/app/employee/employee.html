@@ -21,10 +21,11 @@
           <td>{{ emp.name }}</td>
           <td>{{ emp.email }}</td>
           <td>{{ emp.phone }}</td>
-          <td>
-            <button class="delete-btn" (click)="deleteEmployee(i)">Delete
-            </button>
+          <td class="action-buttons">
+            <button class="edit-btn" (click)="openEdit(emp,i)">Edit</button>
+            <button class="delete-btn" (click)="deleteEmployee(i)">Delete</button>
           </td>
+
         </tr>
       </tbody>
     </table>
@@ -37,10 +38,10 @@
   <div class="popup-content">
 
     <button class="close-btn" (click)="closePopup()">✕</button>
-
-    <!-- child to parent -->
-    <app-employee-form
-      (employeeAdded)="addEmployee($event)"> <!-- parent receive the data --> 
+      <app-employee-form
+      [employeeData]="selectedEmployee"
+      [editMode]="isEditMode" 
+      (save)="saveEmployee($event)">
     </app-employee-form>
 
   </div>
