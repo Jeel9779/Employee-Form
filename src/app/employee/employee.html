@@ -17,16 +17,17 @@
       </thead>
 
       <tbody>
-        <tr *ngFor="let emp of employees; let i = index ">
-          <td>{{ emp.name }}</td>
-          <td>{{ emp.email }}</td>
-          <td>{{ emp.phone }}</td>
-          <td class="action-buttons">
-            <button class="edit-btn" (click)="openEdit(emp,i)">Edit</button>
-            <button class="delete-btn" (click)="deleteEmployee(i)">Delete</button>
-          </td>
-
-        </tr>
+        @for (emp of employees; track $index; let i = $index) {
+          <tr>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.phone }}</td>
+            <td class="action-buttons">
+              <button class="edit-btn" (click)="openEdit(emp,i)">Edit</button>
+              <button class="delete-btn" (click)="deleteEmployee(i)">Delete</button>
+            </td>
+          </tr>
+        }
       </tbody>
     </table>
   </div>
@@ -34,15 +35,19 @@
 </div>
 
 <!-- Popup -->
-<div class="popup" *ngIf="showPopup">
-  <div class="popup-content">
+@if (showPopup){
+  <div class="popup">
+    <div class="popup-content">
 
-    <button class="close-btn" (click)="closePopup()">✕</button>
-      <app-employee-form
-      [employeeData]="selectedEmployee"
-      [editMode]="isEditMode" 
-      (save)="saveEmployee($event)">
-    </app-employee-form>
+      <button class="close-btn" (click)="closePopup()">✕</button>
 
+      <!-- data goes to child -->
+        <app-employee-form
+        [employeeData]="selectedEmployee"
+        [editMode]="isEditMode" 
+        (save)="saveEmployee($event)">
+      </app-employee-form>
+
+    </div>
   </div>
-</div>
+}

@@ -1,6 +1,6 @@
 
 <h2>
-  {{ editMode ? 'Edit Employee Data' : 'Add Employee Data' }}
+  {{ editMode() ? 'Edit Employee Data' : 'Add Employee Data' }}
 </h2>
 
 <form (ngSubmit)="submitForm()" class="form">
@@ -29,8 +29,8 @@
     [(ngModel)]="employee.phone"
     required>
 
-    <button [ngClass]="editMode ? 'update-btn' : 'create-btn'">
-    {{ editMode ? 'Update' : 'Create' }}
+    <button [ngClass]="editMode() ? 'update-btn' : 'create-btn'">
+    {{ editMode() ? 'Update' : 'Create' }}
   </button>
 
 </form>
